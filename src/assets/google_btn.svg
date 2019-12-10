@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="149" height="39" viewBox="0 0 149 39">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke-miterlimit:10}.cls-2,.cls-3,.cls-5{fill:#fff}.cls-3{font-size:14px;font-family:SegoeUI,Segoe UI}.cls-4,.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="google_btn">
+        <g id="패스_1" class="cls-1" data-name="패스 1">
+            <path d="M1040.5 681.5a19.536 19.536 0 0 1-19.575 19.5h-109.85a19.537 19.537 0 0 1-19.575-19.5 19.538 19.538 0 0 1 19.575-19.5h109.851a19.536 19.536 0 0 1 19.575 19.5z" class="cls-4" transform="translate(-891.5 -662)"/>
+            <path d="M1020.925 699c4.697 0 9.111-1.821 12.43-5.128a17.349 17.349 0 0 0 5.145-12.372 17.35 17.35 0 0 0-5.144-12.372 17.497 17.497 0 0 0-12.43-5.128H911.074c-4.696 0-9.11 1.821-12.43 5.128A17.349 17.349 0 0 0 893.5 681.5c0 4.673 1.827 9.067 5.145 12.372a17.497 17.497 0 0 0 12.43 5.128h109.85m0 2h-109.85c-10.81 0-19.575-8.73-19.575-19.5s8.764-19.5 19.575-19.5h109.85c10.813 0 19.575 8.73 19.575 19.5s-8.762 19.5-19.575 19.5z" class="cls-5" transform="translate(-891.5 -662)"/>
+        </g>
+        <g id="그룹_2" data-name="그룹 2" transform="translate(22.3 8.881)">
+            <g id="그룹_1" data-name="그룹 1">
+                <path id="패스_2" d="M929.946 676a1.686 1.686 0 0 0-.989 1.495v18.449a1.941 1.941 0 0 0 .989 1.295l10.554-10.552z" class="cls-2" data-name="패스 2" transform="translate(-928.957 -676)"/>
+                <path id="패스_3" d="M934.041 676.9l9.068 9.067 2.475-2.474z" class="cls-2" data-name="패스 3" transform="translate(-930.667 -676.301)"/>
+                <path id="패스_4" d="M934.041 702.348l9.044-9.045 2.486 2.486z" class="cls-2" data-name="패스 4" transform="translate(-930.667 -681.819)"/>
+                <path id="패스_5" d="M949.162 690.629l2.705-2.706 2.357 1.478a1.463 1.463 0 0 1 .675 1.228 1.5 1.5 0 0 1-.675 1.315l-2.385 1.4z" class="cls-2" data-name="패스 5" transform="translate(-935.752 -680.01)"/>
+            </g>
+            <text id="Google_Play" class="cls-3" data-name="Google Play" transform="translate(30.634 15.078)">
+                <tspan x="0" y="0">Google Play</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

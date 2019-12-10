@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="170" height="46" viewBox="0 0 170 46">
+    <defs>
+        <style>
+            .cls-1,.cls-3,.cls-4,.cls-6{fill:none}.cls-1,.cls-3,.cls-4{stroke:#fff;stroke-width:2px}.cls-2{fill:#fff;font-size:14px;font-family:NotoSansCJKkr-Medium,Noto Sans CJK KR;font-weight:500}.cls-3,.cls-4{stroke-linecap:round}.cls-4{stroke-linejoin:round}.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="download_btn" transform="translate(14.297 4.073)">
+        <g id="사각형_50" class="cls-1" data-name="사각형 50" transform="translate(-14.297 -4.073)">
+            <rect width="170" height="46" class="cls-5" rx="23"/>
+            <rect width="168" height="44" x="1" y="1" class="cls-6" rx="22"/>
+        </g>
+        <text id="Biz_Plan_다운로드" class="cls-2" data-name="Biz Plan 다운로드" transform="translate(7.703 23.927)">
+            <tspan x="0" y="0">Biz Plan 다운로드</tspan>
+        </text>
+        <g id="그룹_9" data-name="그룹 9" transform="translate(122.146 14.746)">
+            <path id="선_1" d="M0 0l15.861.094" class="cls-3" data-name="선 1" transform="translate(0 4.245)"/>
+            <path id="패스_9" d="M1585.082 3645.945l4.365 4.2-4.365 4.145" class="cls-4" data-name="패스 9" transform="translate(-1573.378 -3645.945)"/>
+        </g>
+    </g>
+</svg>

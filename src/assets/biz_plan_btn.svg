@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="149" height="39" viewBox="0 0 149 39">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-1{stroke-miterlimit:10}.cls-2,.cls-5{fill:#fff}.cls-2{font-size:14px;font-family:SegoeUI,Segoe UI}.cls-3{stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px}.cls-4,.cls-5{stroke:none}
+        </style>
+    </defs>
+    <g id="biz_plan_btn">
+        <g id="패스_8" class="cls-1" data-name="패스 8">
+            <path d="M1348.857 681.5a19.536 19.536 0 0 1-19.574 19.5h-109.851a19.538 19.538 0 0 1-19.575-19.5 19.539 19.539 0 0 1 19.575-19.5h109.851a19.536 19.536 0 0 1 19.574 19.5z" class="cls-4" transform="translate(-1199.857 -662)"/>
+            <path d="M1329.283 699c4.696 0 9.11-1.821 12.43-5.128a17.349 17.349 0 0 0 5.144-12.372 17.35 17.35 0 0 0-5.144-12.372 17.497 17.497 0 0 0-12.43-5.128h-109.851c-4.695 0-9.11 1.821-12.43 5.128a17.349 17.349 0 0 0-5.145 12.372c0 4.673 1.827 9.067 5.145 12.372a17.497 17.497 0 0 0 12.43 5.128h109.85m0 2h-109.85c-10.81 0-19.575-8.73-19.575-19.5s8.766-19.5 19.575-19.5h109.85c10.812 0 19.575 8.73 19.575 19.5s-8.763 19.5-19.574 19.5z" class="cls-5" transform="translate(-1199.857 -662)"/>
+        </g>
+        <text id="Biz_Plan" class="cls-2" data-name="Biz Plan" transform="translate(36.515 24.637)">
+            <tspan x="0" y="0">Biz Plan</tspan>
+        </text>
+        <path id="패스_14" d="M9137.072 36.964l6.2 5.091-6.2 4.205" class="cls-3" data-name="패스 14" transform="translate(-9023.187 -21.39)"/>
+    </g>
+</svg>

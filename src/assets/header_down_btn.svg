@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="38" viewBox="0 0 140 38">
+    <defs>
+        <style>
+            .cls-1,.cls-2,.cls-5{fill:none}.cls-1,.cls-2{stroke:#fff;stroke-width:2px}.cls-2{stroke-linecap:round;stroke-linejoin:round}.cls-3{fill:#fff;font-size:18px;font-family:NotoSansCJKkr-Regular,Noto Sans CJK KR;letter-spacing:-.04em}.cls-4{stroke:none}
+        </style>
+    </defs>
+    <g id="header_down_btn" transform="translate(-1484.738 -23)">
+        <g id="사각형_41" class="cls-1" data-name="사각형 41" transform="translate(1484.738 23)">
+            <rect width="140" height="38" class="cls-4" rx="19"/>
+            <rect width="138" height="36" x="1" y="1" class="cls-5" rx="18"/>
+        </g>
+        <path id="패스_14" d="M9137.073 36.964l7.841 6.441-7.841 5.321" class="cls-2" data-name="패스 14" transform="translate(-7542.262)"/>
+        <text id="Biz_Plan" class="cls-3" data-name="Biz Plan" transform="translate(1514.738 49)">
+            <tspan x="0" y="0">Biz Plan</tspan>
+        </text>
+    </g>
+</svg>
