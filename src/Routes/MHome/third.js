@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import PdfFile from "../../assets/AllA_Whitepaper_KR_1.0.134c5d76.pdf";
 
 const Box = styled.div`
   height: 100%;
@@ -81,10 +82,7 @@ const Third = () => {
           <p>AllA Wallet으로 블록체인 신기술을 체험할 차례입니다.</p>
         </PBox>
         <DownBtn>
-          <a
-            href={require("../../assets/AllA_Whitepaper_KR_1.0.pdf")}
-            target="_blank"
-          ></a>
+          <a href={PdfFile} target="_blank"></a>
         </DownBtn>
       </ContentBox>
     </Box>

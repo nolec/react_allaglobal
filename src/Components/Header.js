@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link, animateScroll as scroll } from "react-scroll";
+import PdfFile from "../assets/AllA_Whitepaper_KR_1.0.134c5d76.pdf";
 
 const Header = styled.header`
   width: 100%;
@@ -8,7 +9,7 @@ const Header = styled.header`
   display: flex;
   position: fixed;
   left: 0;
-  z-index: 1;
+  z-index: 10;
   transition: 0.3s linear;
 `;
 const Container = styled.div`
@@ -16,20 +17,16 @@ const Container = styled.div`
   display: flex;
 `;
 const TitleBox = styled.div`
-  width: 67px;
-  height: 52px;
-  margin-top: 13px;
+  margin-top: 23px;
   margin-bottom: 15px;
 `;
 const Title = styled(Link)`
   cursor: pointer;
   width: 100%;
-  height: 100%;
   font-size: 35px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.49;
   letter-spacing: normal;
   text-align: left;
   color: #fff !important;
@@ -104,7 +101,7 @@ export default () => {
             offset={-70}
             duration={500}
           >
-            AllA
+            <img src={require("../assets/alla_logo.svg")} />
           </Title>
         </TitleBox>
         <NavBox>
@@ -123,7 +120,7 @@ export default () => {
             </Item>
             <Item>
               <BizBtn
-                href={require("../assets/AllA_Whitepaper_KR_1.0.pdf")}
+                href={PdfFile}
                 target="_blank"
                 bizUrl={require("../assets/header_down_btn.svg")}
               />

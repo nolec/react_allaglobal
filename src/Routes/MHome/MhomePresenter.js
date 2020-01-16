@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { TweenLite } from "gsap";
 import Second from "./second";
 import Third from "./third";
+import PdfFile from "../../assets/AllA_Whitepaper_KR_1.0.134c5d76.pdf";
+
 const Container = styled.div`
   width: 100%;
   ::before {
@@ -118,7 +120,7 @@ const MhomePresenter = () => (
               andUrl={require("../../assets/google_btn.png")}
             />
             <IOSBtn
-              href={require("../../assets/AllA_Whitepaper_KR_1.0.pdf")}
+              href={PdfFile}
               iosUrl={require("../../assets/biz_plan_btn.png")}
             />
           </ButtonBox>

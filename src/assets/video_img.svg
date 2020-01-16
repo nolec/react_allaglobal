@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="161" height="161" viewBox="0 0 161 161">
+    <defs>
+        <style>
+            .cls-1,.cls-4{fill:none}.cls-1{stroke:#fff;stroke-width:10px}.cls-2{fill:#fff}.cls-3{stroke:none}
+        </style>
+    </defs>
+    <g id="video_img" transform="translate(-.081)">
+        <g id="타원_17" class="cls-1" data-name="타원 17" transform="translate(.081)">
+            <circle cx="80.5" cy="80.5" r="80.5" class="cls-3"/>
+            <circle cx="80.5" cy="80.5" r="75.5" class="cls-4"/>
+        </g>
+        <path id="다각형_1" d="M29.343 8.669a6 6 0 0 1 10.313 0l23.95 40.263A6 6 0 0 1 58.45 58h-47.9a6 6 0 0 1-5.157-9.067z" class="cls-2" data-name="다각형 1" transform="rotate(90 36.04 82.04)"/>
+    </g>
+</svg>

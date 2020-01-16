@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="114" height="114" viewBox="0 0 114 114">
+    <defs>
+        <style>
+            .cls-1,.cls-3{fill:none}.cls-2{fill:#fff}.cls-3{stroke:#0068b4;stroke-width:4px}.cls-4,.cls-5{stroke:none}.cls-5{fill:#0068b4}
+        </style>
+    </defs>
+    <g id="video_icon" transform="translate(-903 -6895)">
+        <path id="사각형_47" d="M0 0h114v114H0z" class="cls-1" data-name="사각형 47" transform="translate(903 6895)"/>
+        <g id="그룹_87" data-name="그룹 87" transform="translate(3 -185)">
+            <g id="패스_8524" class="cls-2" data-name="패스 8524">
+                <path d="M17.786 17.89H3.907a.97.97 0 0 1-.852-.489.97.97 0 0 1-.008-.982l6.94-12.336a.968.968 0 0 1 .86-.504c.173 0 .605.05.86.504l6.94 12.336a.97.97 0 0 1-.009.982.97.97 0 0 1-.852.49z" class="cls-4" transform="rotate(90 -3078.229 4047.923)"/>
+                <path d="M10.847 5.613L4.785 16.39h12.124L10.847 5.613m0-3.534c.846 0 1.692.423 2.167 1.268l6.94 12.337c.932 1.658-.266 3.706-2.168 3.706H3.907c-1.902 0-3.1-2.048-2.167-3.706L8.68 3.347a2.463 2.463 0 0 1 2.167-1.268z" class="cls-5" transform="rotate(90 -3078.229 4047.923)"/>
+            </g>
+            <g id="타원_20" class="cls-3" data-name="타원 20" transform="translate(928 7108)">
+                <circle cx="29" cy="29" r="29" class="cls-4"/>
+                <circle cx="29" cy="29" r="27" class="cls-1"/>
+            </g>
+        </g>
+    </g>
+</svg>
