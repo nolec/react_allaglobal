@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { reset } from "styled-reset";
 import { isMobile } from "react-device-detect";
+import { device } from "../device";
 
 const globalstyles = createGlobalStyle`
 ${reset};

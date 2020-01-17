@@ -6,9 +6,11 @@ import { ThemeProvider, css } from "styled-components";
 import ThemeContext from "../../Context";
 
 const boxStyle = () => css`
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding-top: 168px;
+  display: flex;
+  justify-content: center;
 `;
 const titleStyle = () => css`
   width: 422px;

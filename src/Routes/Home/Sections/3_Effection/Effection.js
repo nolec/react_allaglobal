@@ -7,9 +7,9 @@ import { device } from "../../../../device";
 
 const Box = styled.div`
   margin-bottom: 100px;
-  ${device.PC1280`overflow :hidden;`}
   .grid-box {
-    max-width: 100%;
+    max-width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto;

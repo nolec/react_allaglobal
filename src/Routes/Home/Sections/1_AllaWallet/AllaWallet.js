@@ -6,7 +6,6 @@ const Box = styled.div`
   color: #fff !important;
   display: flex;
   margin-bottom: 200px;
-  justify-content: space-between;
 `;
 const ContentBox = styled.div``;
 const Title = styled.h1`
@@ -23,6 +22,12 @@ const Title = styled.h1`
   margin-top: 30px;
 `;
 const Content = styled.div``;
+const Wrapper = styled.div`
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`;
 const Infor = styled.p`
   width: 347px;
   height: 72px;
@@ -101,32 +106,34 @@ const BgBox = styled.div`
 
 export default () => {
   return (
-    <Box>
-      <ContentBox>
-        <Title>AllA Wallet</Title>
-        <Content>
-          <Infor>
-            누구나 쉽게 체험하는 채굴의 혜택,
-            <br />
-            지금 시작해보세요.
-          </Infor>
-          <ButtonBox>
-            <AndroidBtn href={"http://allaglobal.com/download/alla.apk"} />
-            <IOSBtn href="#" onClick={() => alert("준비중입니다.")} />
-          </ButtonBox>
-        </Content>
-      </ContentBox>
-      <BgBox>
-        <div>
-          <Img />
-        </div>
-        <div>
-          <Img2 />
-        </div>
-        <div>
-          <Img3 />
-        </div>
-      </BgBox>
+    <Box id="section1">
+      <Wrapper>
+        <ContentBox>
+          <Title>AllA Wallet</Title>
+          <Content>
+            <Infor>
+              누구나 쉽게 체험하는 채굴의 혜택,
+              <br />
+              지금 시작해보세요.
+            </Infor>
+            <ButtonBox>
+              <AndroidBtn href={"http://allaglobal.com/download/alla.apk"} />
+              <IOSBtn href="#" onClick={() => alert("준비중입니다.")} />
+            </ButtonBox>
+          </Content>
+        </ContentBox>
+        <BgBox>
+          <div>
+            <Img />
+          </div>
+          <div>
+            <Img2 />
+          </div>
+          <div>
+            <Img3 />
+          </div>
+        </BgBox>
+      </Wrapper>
     </Box>
   );
 };

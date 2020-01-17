@@ -5,6 +5,8 @@ import ThemeContext from "../../../../Context";
 const Warpper = styled.div`
   display: flex;
   justify-content: center;
+  max-width: 1200px;
+  margin: auto;
 `;
 const GridBox = styled.div`
   display: grid;

@@ -7,6 +7,7 @@ import EasySign from "./Sections/2_EasySign";
 import Effection from "./Sections/3_Effection";
 import Market from "./Sections/4_Market";
 import Video from "./Sections/5_Video";
+import { device } from "../../device";
 const PdfFile = require("../../assets/AllA_Whitepaper_KR_1.0.134c5d76.pdf");
 
 const Container = styled.div`

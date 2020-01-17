@@ -6,10 +6,11 @@ const Box = styled.div`
   overflow: hidden;
   max-width: 100%;
   margin-bottom: 300px;
-  margin-top: 200px;
+  padding-top: 200px;
   position: relative;
   .grid-box {
-    width: 100%;
+    max-width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-rows: auto auto;
     margin-bottom: 190px;
@@ -26,16 +27,16 @@ const Box = styled.div`
   }
   &::before {
     content: "";
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 120%;
     position: absolute;
-    background-image: url(${props => props.theme.file.pass});
+    background-image: url(/static/media/pass.eb2c2fdf.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center left;
     z-index: -2;
-    right: -15%;
-    top: -5%;
+    right: -10%;
+    top: -10%;
   }
   &::after {
     content: "";
