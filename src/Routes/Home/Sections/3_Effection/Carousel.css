@@ -1,0 +1,159 @@
+.carouselWrapper {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.imgWrap {
+  position: "absolute";
+  top: 0;
+  left: 0;
+}
+.imgWrap:hover {
+  cursor: pointer;
+}
+li {
+  list-style-type: none;
+  left: 40%;
+}
+.dn {
+  display: none;
+}
+/* const con = useContext(ThemeContext);
+const image = useRef(null);
+
+const [properties, setProperties] = useState(con.slide); //이미지들
+const [currFirstImg, setCurrFirstImg] = useState(0); // The Current Middle Element/Primary element of our carousel
+const [actualFirst, setActualFirst] = useState(""); // The Clicked Image when it is not the Immediate Next or Immediate Previous Image
+const [visibleItemsProps, setVisibleItemsProps] = useState({
+  order: [],
+  styles: {}
+}); // Set Styles and ordering to Images currently visible
+const intervalRef = useRef(0); // Reference to interval so that it can be removed from within/ before initiating new interval
+const imgDifference = useRef(1); // The difference between the middle image and the image that is clicked by user to view next
+const currMiddleImgRef = useRef(0); // Reference for the image that is in the middle
+const durationRef = useRef(750); // Animation Duration, it should be changed when the image cicked is not immediate next/prev
+const elementsInLeft = Math.ceil(properties.length / 2); // Floor is done to also include middle image along with other images to its left.
+const elementsInRight = properties.length - elementsInLeft;
+const autoNext = false;
+
+const constructItem = () => {
+  const visibleItemsProps = {};
+  visibleItemsProps.order = [];
+  let curr_center = currFirstImg; // Storing the Current Middle element in focus
+  let timesToIterate = 0; // To iterate through all visible number of images.
+  const division = 295 * (1.66 / elementsInLeft);
+  let xTranslate = 295; // To move the element with respect to x axis
+  let rightEltCount = elementsInRight;
+  let leftEltCount = elementsInLeft; // including middle element
+  let curr_center_copy = curr_center;
+
+  while (timesToIterate < properties.length) {
+    const styles = {};
+    let currImgIndex;
+    let currImgIndexOnRight = true;
+    if (timesToIterate < elementsInRight) {
+      const nextIndex = curr_center - rightEltCount;
+      currImgIndex =
+        nextIndex > -1 ? nextIndex : properties.length - Math.abs(nextIndex);
+      xTranslate = 295 - division * rightEltCount;
+      rightEltCount--;
+    } else {
+      currImgIndexOnRight = false;
+      currImgIndex = curr_center_copy;
+      if (currImgIndex + 1 >= properties.length) {
+        // to maintain cyclic carousel
+        curr_center_copy = 0;
+      } else {
+        curr_center_copy++;
+      }
+      xTranslate =
+        295 + division * Math.abs(leftEltCount - (timesToIterate + 1));
+    }
+    styles.transform = `translateX(calc(-50% - ${xTranslate}px)`;
+    styles.left = "50%";
+    visibleItemsProps.order.push(currImgIndex);
+    visibleItemsProps[currImgIndex] = { styles }; // pushing all previously created styles
+    timesToIterate++;
+    console.log(visibleItemsProps, timesToIterate);
+  }
+  durationRef.current =
+    actualFirst === "" ? 750 : 750 / imgDifference.current; // duration will be user given if he clicks next image or we divide the duration by number of images skipped
+  setVisibleItemsProps(visibleItemsProps);
+};
+const changeCenter = ({ event, index, large_url }) => {
+  // Checking if the clicked item is immediately next/prev item.Because to induce a carousel effect we need to make the images move in sequence.
+  // But that is not possible, when the user clicks out of sequence(Eg: image 4 from image 1).So here, the order breaks and we cannot
+  // apply our sequential handling logic to it. If we do the 4th image comes into view from the back but the "cycling effect"
+  // of scrolling through images 2 and 3 would have been missed.
+  const currFirstImgIndex = visibleItemsProps.order.indexOf(currFirstImg);
+  const prevIndex = visibleItemsProps.order[currFirstImgIndex - 1];
+  const nextIndex = visibleItemsProps.order[currFirstImgIndex + 1];
+  if (index !== currFirstImg) {
+    if (index === prevIndex || index === nextIndex) {
+      // if immediate first/next image
+      setCurrFirstImg(index);
+    } else {
+      const val = currFirstImgIndex - visibleItemsProps.order.indexOf(index);
+      imgDifference.current = Math.abs(val); // Gives the number of images we have to cycle through, so we can provide equal part of total duration to all images.
+      setActualFirst(index);
+      cycleToNextImage(index);
+    }
+  }
+};
+const cycleToNextImage = actual => {
+  if (
+    visibleItemsProps.order.indexOf(currMiddleImgRef.current) >
+    visibleItemsProps.order.indexOf(actual)
+  ) {
+    // Right side image click
+    currMiddleImgRef.current =
+      currMiddleImgRef.current - 1 > -1
+        ? currMiddleImgRef.current - 1
+        : properties.length - 1; // Right side image click
+    setCurrFirstImg(currMiddleImgRef.current);
+  } else {
+    // Left side image click
+    currMiddleImgRef.current =
+      currMiddleImgRef.current + 1 < properties.length
+        ? currMiddleImgRef.current + 1
+        : 0; // Conditions to handle cycle
+    setCurrFirstImg(currMiddleImgRef.current);
+  }
+};
+// Hook fires on evey change to actualFirst value. actualFirst is set when there is out of order click, so we have to handle it through timeinterval
+// so that we can allow all intermediate images to do some animation in the meantime, to avoid the cycling look jerky.
+useEffect(() => {
+  clearInterval(intervalRef.current);
+  if (actualFirst !== "") {
+    intervalRef.current = setInterval(() => {
+      if (actualFirst !== "" && actualFirst !== currMiddleImgRef.current) {
+        // If the currentimage in middle is not actually clicked image then gotoNext image
+        cycleToNextImage(actualFirst);
+      } else if (
+        actualFirst !== "" &&
+        actualFirst === currMiddleImgRef.current
+      ) {
+        setActualFirst("");
+        imgDifference.current = 1;
+        clearInterval(intervalRef.current); // If actual clicked and middle image are same we are all set to clear intervals, as they are unnecessary now
+      }
+    }, durationRef.current - 100); // Introduced an advance of 100ms to begin bringing nextimage to middle before the previous one settles down else it looks jerky
+  }
+}, [actualFirst]);
+useEffect(() => {
+  constructItem();
+  currMiddleImgRef.current = currFirstImg; // Need to set it here as well so while accessing inside interval it will have the latest value
+}, [currFirstImg]);
+useEffect(() => {
+  if (autoNext) {
+    setInterval(() => {
+      const nextImg =
+        currMiddleImgRef.current + 1 < properties.length
+          ? currMiddleImgRef.current + 1
+          : 0;
+      setCurrFirstImg(nextImg);
+    }, 3000);
+  }
+}, []); */
