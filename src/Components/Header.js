@@ -109,10 +109,10 @@ export default () => {
             <Item>
               <Alink
                 activeClass="active"
-                to="section1"
+                to="section2"
                 spy={true}
                 smooth={true}
-                offset={-100}
+                offset={0}
                 duration={500}
               >
                 기능소개

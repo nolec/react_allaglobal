@@ -5,7 +5,7 @@ const Box = styled.div`
   ${props => props.theme.style.boxStyle}
   color: #fff !important;
   display: flex;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 `;
 const ContentBox = styled.div``;
 const Title = styled.h1`
@@ -117,7 +117,13 @@ export default () => {
               지금 시작해보세요.
             </Infor>
             <ButtonBox>
-              <AndroidBtn href={"http://allaglobal.com/download/alla.apk"} />
+              {/* <AndroidBtn href={"http://allaglobal.com/download/alla.apk"} /> */}
+              <AndroidBtn
+                href={
+                  "https://play.google.com/store/apps/details?id=io.allawallet.allaglobal"
+                }
+                target="_blanket"
+              />
               <IOSBtn href="#" onClick={() => alert("준비중입니다.")} />
             </ButtonBox>
           </Content>

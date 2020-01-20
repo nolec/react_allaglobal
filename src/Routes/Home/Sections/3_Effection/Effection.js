@@ -6,7 +6,7 @@ import { device } from "../../../../device";
 // import { AutoRotatingCarousel } from "material-auto-rotating-carousel";
 
 const Box = styled.div`
-  margin-bottom: 100px;
+  margin-bottom: 0px;
   .grid-box {
     max-width: 1200px;
     margin: auto;
@@ -39,7 +39,7 @@ const Img = styled.img.attrs({
 })``;
 export default () => {
   return (
-    <Box id="section2">
+    <Box id="section3">
       <div className="grid-box">
         <div>
           <div className="grid-item">

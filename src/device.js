@@ -28,7 +28,6 @@ const minSize = {
   minPC: 1200
 };
 export const device = Object.keys(maxSize).reduce((acc, key) => {
-  console.log(acc);
   acc[key] = style => `
       @media (max-width: ${maxSize[key]}px) {
         ${style};

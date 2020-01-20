@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Box = styled.div`
   ${props => props.theme.style.boxStyle}
-  margin-bottom: 350px;
+  margin-bottom: 100px;
   .grid-box {
     width: 100%;
     display: grid;
@@ -40,7 +40,7 @@ const Img2 = styled.img.attrs({
 })``;
 export default () => {
   return (
-    <Box id="section1">
+    <Box id="section2">
       <div>
         <Title>
           한 눈에 모아보는 수익 현황,이제 읽지 말고 직접 확인해보세요.

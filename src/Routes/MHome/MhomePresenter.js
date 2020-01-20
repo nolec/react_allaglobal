@@ -13,11 +13,11 @@ const Container = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 560px;
+    height: 411px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(${require("../../assets/bg2.png")});
+    background-image: linear-gradient(152deg, #6f86d6 18%, #48c6ef 84%);
     z-index: -1;
   }
 `;
@@ -26,7 +26,7 @@ const Box = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-bottom: 51.4px;
+  margin-bottom: 80px;
 `;
 const ContentBox = styled.div`
   color: #ffffff;
@@ -49,6 +49,7 @@ const SubTitle = styled.h2`
   line-height: 1.46;
   letter-spacing: normal;
   margin-bottom: 10px;
+  margin-top: 0;
 `;
 const Infor = styled.p`
   width: 317px;
@@ -82,27 +83,43 @@ const ButtonBox = styled.div`
 
 const BgBox = styled.div`
   position: relative;
-  left: 30px;
-  margin-top: 60px;
-  background-size: cover;
+  margin-top: 43px;
   background-repeat: no-repeat;
-  background-position: 80% center;
-  width: 312px;
-  height: 201px;
-  background-image: url(${props => props.BgUrl});
+  background-position: center center;
+  width: 100%;
+  height: 262px;
+  background-image: url(${props => props.theme.file.mphone_1});
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-100%);
+    top: 26px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 108px;
+    height: 221px;
+    object-fit: contain;
+    background-image: url(${props => props.theme.file.mphone_3});
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 50%;
+    transform: translate(100%);
+    top: 26px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 108px;
+    height: 221px;
+    object-fit: contain;
+    background-image: url(${props => props.theme.file.mphone_2});
+    z-index: -1;
+  }
 `;
-const Phone = () => {
-  const phone = useRef();
-
-  useLayoutEffect(() => {
-    if (phone.current) {
-      TweenLite.from(phone.current, 1, { y: -300, opacity: 0 });
-      console.log(phone.current);
-    }
-  });
-
-  return <BgBox BgUrl={require("../../assets/Mockup_2.png")} />;
-};
 const MhomePresenter = () => (
   <Container>
     <Box>
@@ -116,7 +133,9 @@ const MhomePresenter = () => (
           </Infor>
           <ButtonBox>
             <AndroidBtn
-              href={"http://allaglobal.com/download/alla.apk"}
+              href={
+                "https://play.google.com/store/apps/details?id=io.allawallet.allaglobal"
+              }
               andUrl={require("../../assets/google_btn.png")}
             />
             <IOSBtn
@@ -125,8 +144,8 @@ const MhomePresenter = () => (
             />
           </ButtonBox>
         </Content>
+        <BgBox></BgBox>
       </ContentBox>
-      <Phone />
     </Box>
     <Second />
     <Third />

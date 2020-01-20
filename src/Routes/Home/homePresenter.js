@@ -102,7 +102,7 @@ const HomePresenter = () => (
           </div>
           <div className="contentBox">
             <div>
-              <h3>A World만의 헤택, 지금 이용해 보세요.</h3>
+              <h3>A World만의 혜택, 지금 이용해 보세요.</h3>
             </div>
             <div>
               <p>AllA Wallet으로 블록체인 신기술을 체험할 차례입니다.</p>

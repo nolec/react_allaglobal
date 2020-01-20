@@ -8,7 +8,7 @@ import ThemeContext from "../../Context";
 const boxStyle = () => css`
   max-width: 100%;
   margin: 0 auto;
-  padding-top: 168px;
+  padding-top: 80px;
   display: flex;
   justify-content: center;
 `;
@@ -25,7 +25,7 @@ const titleStyle = () => css`
   color: #333333;
   margin: auto;
   position: relative;
-  margin-bottom: 300px;
+  margin-bottom: 150px;
   ::after {
     content: "";
     width: 150px;
@@ -82,6 +82,9 @@ export const theme = {
     phone_1: require("../../assets/1.png"),
     phone_2: require("../../assets/img_2_1.png"),
     phone_3: require("../../assets/img_3_1.png"),
+    mphone_1: require("../../assets/m_1.png"),
+    mphone_2: require("../../assets/m_2.png"),
+    mphone_3: require("../../assets/m_3.png"),
     icon_1: require("../../assets/service_icon.svg"),
     icon_2: require("../../assets/mining_icon.svg"),
     icon_3: require("../../assets/market_icon.svg"),
@@ -92,16 +95,16 @@ export const theme = {
     line: require("../../assets/line_group.png"),
     video: require("../../assets/alla_app_video.mp4"),
     videoImg: require("../../assets/video_img.png"),
-    allaBg: require("../../assets/alla_bg.png")
+    allaBg: require("../../assets/video_img1.png")
   }
 };
 const files = {
   slide: [
-    { index: 0, picture: require("../../assets/img_1.png") },
-    { index: 1, picture: require("../../assets/img_2.png") },
-    { index: 2, picture: require("../../assets/img_3.png") },
-    { index: 3, picture: require("../../assets/img_4.png") },
-    { index: 4, picture: require("../../assets/img_5.png") }
+    { index: 1, picture: require("../../assets/img_1.png") },
+    { index: 2, picture: require("../../assets/img_2.png") },
+    { index: 3, picture: require("../../assets/img_3.png") },
+    { index: 4, picture: require("../../assets/img_4.png") },
+    { index: 5, picture: require("../../assets/img_5.png") }
   ],
   grid: [
     require("../../assets/market_1.png"),
@@ -109,11 +112,20 @@ const files = {
     require("../../assets/market_3.png"),
     require("../../assets/market_4.png"),
     require("../../assets/market_5.png")
+  ],
+  Mgrid: [
+    require("../../assets/mmarket_1.png"),
+    require("../../assets/mmarket_2.png"),
+    require("../../assets/mmarket_3.png")
   ]
 };
 export default () => {
   return isMobile ? (
-    <MhomePresenter></MhomePresenter>
+    <ThemeProvider theme={theme}>
+      <ThemeContext.Provider value={files}>
+        <MhomePresenter></MhomePresenter>
+      </ThemeContext.Provider>
+    </ThemeProvider>
   ) : (
     <ThemeProvider theme={theme}>
       <ThemeContext.Provider value={files}>

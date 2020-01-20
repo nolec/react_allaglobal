@@ -6,14 +6,15 @@ import ReactPlayer from "react-player";
 const Box = styled.div`
   overflow: hidden;
   max-width: 100%;
-  margin-bottom: 300px;
-  margin-top: 200px;
+  margin-bottom: 250px;
+  margin-top: 50px;
   position: relative;
+  padding-bottom: 30px;
   .grid-box {
     width: 100%;
     display: grid;
     grid-template-rows: auto auto;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
   }
   .grid-item {
     margin-top: 100px;
@@ -58,6 +59,7 @@ const VideoBox = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   position: relative;
+  box-shadow: 0px 6px 20px 0px rgba(153, 153, 153, 1);
 `;
 const Video = styled(ReactPlayer).attrs({
   url: props => props.theme.file.video,
@@ -70,11 +72,13 @@ const Video = styled(ReactPlayer).attrs({
   /* position: absolute; */
   top: 0;
   left: 0;
+  video{
+    margin-bottom: -2px;
+  }
   .react-player__preview {
     min-height: 675px !important;
     background-image: url(${props => props.theme.file.allaBg}) !important;
     background-size: auto !important;
-    background-color: rgba(251, 251, 251, 0.63) !important;
     background-repeat: no-repeat !important;
   }
   .react-player__shadow {
@@ -86,9 +90,10 @@ const Video = styled(ReactPlayer).attrs({
     border: none !important;
     width: 200px;
     height: 200px;
-    background-image: url(${props => props.theme.file.videoImg}) !important;
+    /* background-image: url(${props =>
+      props.theme.file.videoImg}) !important; */
     background-size: cover !important;
-    background-color: rgba(251, 251, 251, 0.63) !important;
+
     background-repeat: no-repeat !important;
   }
 `;
@@ -98,11 +103,9 @@ const Img = styled.img.attrs({
 
 export default () => {
   const video = useRef(null);
-  useEffect(() => {
-    console.log(video);
-  }, []);
+
   return (
-    <Box id="section3">
+    <Box id="section5">
       <div className="grid-box">
         <div>
           <div className="grid-item">

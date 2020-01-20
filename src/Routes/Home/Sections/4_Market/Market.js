@@ -5,15 +5,15 @@ import Grid from "./Grid";
 const Box = styled.div`
   overflow: hidden;
   max-width: 100%;
-  margin-bottom: 300px;
-  padding-top: 200px;
+  margin-bottom: 100px;
+  padding-top: 130px;
   position: relative;
   .grid-box {
     max-width: 1200px;
     margin: auto;
     display: grid;
     grid-template-rows: auto auto;
-    margin-bottom: 190px;
+    margin-bottom: 150px;
   }
   .grid-item {
     margin-top: 100px;
@@ -35,7 +35,7 @@ const Box = styled.div`
     background-repeat: no-repeat;
     background-position: center left;
     z-index: -2;
-    right: -10%;
+    right: -12%;
     top: -10%;
   }
   &::after {
@@ -65,7 +65,7 @@ const Img = styled.img.attrs({
 })``;
 export default () => {
   return (
-    <Box id="section3">
+    <Box id="section4">
       <div className="grid-box">
         <div>
           <div className="grid-item">

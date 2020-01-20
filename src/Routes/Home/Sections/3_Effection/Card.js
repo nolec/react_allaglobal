@@ -1,22 +1,90 @@
 import React, { useContext, useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import ThemeContext from "../../../../Context";
+import { Button } from "@material-ui/core";
 // import Carousel from "./Carousel";
 
 const Container = styled.div`
   position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 120%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 15%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+  &:after {
+    left: auto;
+    right: 0;
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 1) 15%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  ${props =>
+    props.css &&
+    props.css.map(
+      property =>
+        `.cards-slider.active-slide-${property.index} #card-${property.index} {
+     opacity: 1;
+     transform: scale(1);
+     background-color: #f3f3f3;
+     border-color: #f3f3f3;`
+    )};
 `;
-
+const Slider = styled.div`
+  position: relative;
+  max-width: 296px;
+  height: 100%;
+  margin: 0 auto;
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 600px;
+    /* border: 5px solid #61dafb; */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+`;
 const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
-  position: relative;
-  /* height: 600px; */
+  position: absolute;
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
 `;
 const Card = styled.div`
-  /* position: absolute;
-  left: 50%;
-  transform: translate(-50%); */
+  flex: 1;
+  min-width: 200px;
+  opacity: 0.7;
+  transform: scale(0.8);
+  /* transition: all 1s linear; */
+  /* transition: opacity 300ms linear, border-color 300ms linear,
+    background-color 300ms linear,
+    transform 500ms cubic-bezier(0.455, 0.03, 0.515, 0.955); */
+`;
+const Controls = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Img = styled.img``;
@@ -24,53 +92,44 @@ const Img = styled.img``;
 export default () => {
   const con = useContext(ThemeContext);
   const [properties, setProperties] = useState(con.slide); //이미지들
-  const [currFirstImg, setCurrFirstImg] = useState(0); // The Current Middle Element/Primary element of our carousel
-  const [visibleItemsProps, setVisibleItemsProps] = useState({
-    order: [],
-    styles: {}
-  }); // Set Styles and ordering to Images currently visible
+  const [property, setProperty] = useState(properties[2]); //이미지들
+  const [checkIndex, setCheckIndex] = useState(0);
+  const slideIndex = useRef(null);
 
-  const initialSetting = () => {
-    const shownItems = {};
-    let timesToIterate = 0;
-    let curr_center = currFirstImg;
-    let curr_center_copy = curr_center;
-    while (timesToIterate < properties.length) {
-      const styles = {};
-      let currImgIndex;
-      let currImgIndexOnRight = true; // Tells if in this iteration the currently iterated image lies left to the middle image or not
-      if (timesToIterate < 2) {
-      } else {
-        currImgIndexOnRight = false;
-        currImgIndex = curr_center_copy;
-        if (curr_center_copy + 1 >= properties.length) {
-          // to maintain cyclic carousel
-          curr_center_copy = 0;
-        } else {
-          curr_center_copy++;
-        }
-      }
-      visibleItemsProps.order.push(currImgIndex);
-      timesToIterate++;
-    }
-    setVisibleItemsProps(visibleItemsProps);
-    console.log(visibleItemsProps);
+  const nextProperty = () => {
+    const newIndex = property.index;
+    setProperty(properties[newIndex]);
+  };
+
+  const prevProperty = () => {
+    const newIndex = property.index - 2;
+    setProperty(properties[newIndex]);
+  };
+  const styleSetting = () => {
+    const compare = slideIndex.current.classList[3].split("-", 3)[2];
+    setCheckIndex(compare);
+    console.log(checkIndex, property.index);
   };
   useEffect(() => {
-    initialSetting();
-  }, []);
+    styleSetting();
+  }, [property]);
+
   return (
     <>
-      <Container className="swiper-container">
-        <Wrapper
-          className="swiper-wrapper"
-          style={{
-            height: "600px",
-            width: 100 + "%",
-            padding: 10 + "px"
-          }}
+      <Container className="swiper-container" css={properties}>
+        <Slider
+          ref={slideIndex}
+          className={`cards-slider active-slide-${property.index}`}
         >
-          {/* {properties.length > 0 && (
+          <Wrapper
+            className="swiper-wrapper"
+            style={{
+              transition: ".3s linear",
+              transform: `translateX(calc(20% - ${property.index *
+                (100 / properties.length)}%))`
+            }}
+          >
+            {/* {properties.length > 0 && (
             <Carousel
               imgList={properties}
               img_width={295}
@@ -79,35 +138,60 @@ export default () => {
               duration={750}
             />
           )} */}
-          {properties.length > 0 &&
+            {/*내꺼*/}
+            {/* {properties.length > 0 &&
             properties.map((property, i) => {
               const picture = property.picture;
               const dn = visibleItemsProps.order.indexOf(i) === -1; // To not to show images that are out of visibility scope
               const styles = visibleItemsProps[i]
                 ? visibleItemsProps[i].styles
                 : {};
+              console.log(styles);
               return (
                 <Card
-                  className={"imgWrap " + (dn ? "dn" : "")}
+                  style={styles}
                   key={property.index}
-                  style={{
-                    ...styles,
-                    position: "absolute",
-                    transition: `all 750ms linear `
-                  }}
-                  // onClick={e => changeCenter({ e, i, picture })}
+                  onClick={e => changeCenter(i)}
                 >
-                  <Img src={picture} width={295} height={600} />
+                  <Img src={picture} />
                 </Card>
               );
-            })}
-        </Wrapper>
-        <button class="next">
-          <i class="material-icons">keyboard_arrow_right</i>
-        </button>
-        <button class="prev">
-          <i class="material-icons">keyboard_arrow_left</i>
-        </button>
+            })} */}
+            {properties.length > 0 &&
+              properties.map((property, i) => {
+                const styles = {
+                  opacity: "1",
+                  transform: "scale(1)",
+                  backgroundColor: "#f3f3f3",
+                  transition: "all .3s linear"
+                };
+
+                return (
+                  <Card
+                    key={property.index}
+                    id={`card-${property.index}`}
+                    className="card"
+                    style={
+                      parseInt(checkIndex) === property.index ? styles : null
+                    }
+                  >
+                    <Img src={property.picture} />
+                  </Card>
+                );
+              })}
+          </Wrapper>
+        </Slider>
+        <Controls>
+          <Button onClick={prevProperty} disabled={property.index === 0}>
+            Prev
+          </Button>
+          <Button
+            onClick={nextProperty}
+            disabled={property.index === properties.length - 1}
+          >
+            Next
+          </Button>
+        </Controls>
       </Container>
     </>
   );
