@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import ThemeContext from "../../../../Context";
 import { Button } from "@material-ui/core";
+import Slide from "./slide/slide";
 // import Carousel from "./Carousel";
 
 const Container = styled.div`
@@ -193,6 +194,9 @@ export default () => {
           </Button>
         </Controls>
       </Container>
+      <div style={{ width: "500px", height: "300px", position: "relative" }}>
+        <Slide></Slide>
+      </div>
     </>
   );
 };
