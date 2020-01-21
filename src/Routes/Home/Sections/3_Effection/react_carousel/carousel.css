@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+
+#carousel {
+  position: absolute;
+  height: 600px;
+  max-width: 1750px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.arrow {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  transform: translate(0, -50%);
+  text-align: center;
+  font-size: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-left {
+  left: 50px;
+}
+.arrow-right {
+  right: 50px;
+}
+
+.item {
+  width: 295px;
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  position: absolute;
+}
+
+.level-2 {
+  line-height: 150px;
+  /* background-color: #228291; */
+  left: 50%;
+  transform: translate(calc(-50% - 2 * 295px)) scale(0.7);
+  opacity: 0.7;
+}
+
+.level-1 {
+  line-height: 180px;
+  /* background-color: #6796e5; */
+  left: 50%;
+  transform: translate(calc(-50% - 1 * 295px)) scale(0.7);
+  opacity: 0.8;
+}
+
+.level0 {
+  line-height: 200px;
+  /* background-color: #4ec9e1; */
+  left: 50%;
+  transform: translate(-50%) scale(1);
+  opacity: 1;
+}
+
+.level1 {
+  line-height: 180px;
+  /* background-color: #6796e5; */
+  left: 50%;
+  transform: translate(calc(-50% + 1 * 295px)) scale(0.7);
+  opacity: 0.8;
+}
+
+.level2 {
+  line-height: 150px;
+  /* background-color: #228291; */
+  left: 50%;
+  transform: translate(calc(-50% + 2 * 295px)) scale(0.7);
+  opacity: 0.7;
+}
+
+.left-enter {
+  opacity: 0;
+  transform: translate(-1000%);
+  height: 120px;
+  width: 90px;
+}
+
+.left-enter.left-enter-active {
+  opacity: 1;
+}
+
+.left-leave {
+  opacity: 1;
+  left: 650px;
+}
+
+.left-leave.left-leave-active {
+  opacity: 0;
+}
+
+.right-enter {
+  opacity: 0;
+}
+
+.right-enter.right-enter-active {
+  opacity: 1;
+}
+
+.right-leave {
+  opacity: 1;
+}
+
+.right-leave.right-leave-active {
+  opacity: 0;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

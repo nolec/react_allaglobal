@@ -45,7 +45,7 @@ const GridItem = styled.div`
 `;
 const ItemBox = styled.div`
   padding: 0;
-  margin-bottom: 52px;
+  margin-bottom: 70px;
 `;
 const GridImg = styled.div`
   ${props => props.theme.style.gridicon(56, 56, 0)}
@@ -105,7 +105,7 @@ const Market = styled.div`
 `;
 const Card = styled.div`
   &:nth-child(1) {
-    grid-column: 1 / span 10;
+    /* grid-column: 1 / span 10; */
     grid-row: 1 / span 3;
   }
 

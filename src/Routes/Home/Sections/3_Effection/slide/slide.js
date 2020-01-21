@@ -51,7 +51,7 @@ const slide = () => {
       <div class="item active">
         <img src="https://t3.ftcdn.net/jpg/01/21/39/24/240_F_121392436_TyJ0RrKUxTni7ADl2tEmxhiWB3DQpa99.jpg" />
       </div>
-      <div class=" item next">
+      <div class="item next">
         <img src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/assets/share_new.jpg" />
       </div>
       <div class="item">

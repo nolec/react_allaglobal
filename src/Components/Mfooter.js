@@ -10,6 +10,7 @@ const Footer = styled.footer`
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  margin-top: 60px;
   p {
     font-size: 8px;
     font-weight: normal;
@@ -18,7 +19,8 @@ const Footer = styled.footer`
     line-height: 1.5;
     letter-spacing: 0.16px;
     color: #fff;
-    margin-top: 20px;
+    margin-top: 5px;
+    margin-bottom: 7px;
   }
   ::before {
     content: "";
@@ -39,26 +41,34 @@ const ButtonBox = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: 10px;
+  height: 18px;
   a {
-    width : 140px;
+    width: 140px;
     display: flex;
-    justify-content : center;
+    justify-content: center;
     position: relative;
-    color : #fff;
-    font-size: 10px;
-    font-weight : inherit;
+    color: #fff;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: 0.24px;
     :nth-child(1) {
       padding-right: 10px;
+      justify-content: flex-end;
     }
     :nth-child(2) {
       padding-left: 10px;
+      justify-content: flex-start;
     }
     :nth-child(1)::before {
       content: "";
       width: 1px;
-      height: 100%;
-      background-color: skyblue;
+      height: 80%;
+      top : 50%;
+      transform : translateY(-50%);
+      background-color: #fff;
       position: absolute;
       right: 0;
     }
@@ -67,7 +77,6 @@ const ButtonBox = styled.div`
 export default () => {
   return (
     <Footer>
-      <p>Copyright © 2019 ALLA CLASSIC GLOBAL PTE. LTD. All rights reserved.</p>
       <ButtonBox>
         <a href={Privacy} target="_blank">
           Privacy Policy
@@ -76,6 +85,7 @@ export default () => {
           Terms &#38; Conditions
         </a>
       </ButtonBox>
+      <p>Copyright © 2019 ALLA CLASSIC GLOBAL PTE. LTD. All rights reserved.</p>
     </Footer>
   );
 };

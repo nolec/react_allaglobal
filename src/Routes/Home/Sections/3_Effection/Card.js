@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ThemeContext from "../../../../Context";
 import { Button } from "@material-ui/core";
 import Slide from "./slide/slide";
+import Carousel from "./react_carousel/carousel";
 // import Carousel from "./Carousel";
 
 const Container = styled.div`
@@ -10,62 +11,17 @@ const Container = styled.div`
   width: 100%;
   height: 600px;
   overflow: hidden;
-  &:before,
-  &:after {
-    content: "";
-    display: block;
-    width: 50%;
-    height: 120%;
-    background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 1) 15%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-  }
-  &:after {
-    left: auto;
-    right: 0;
-    background: linear-gradient(
-      to left,
-      rgba(255, 255, 255, 1) 15%,
-      rgba(255, 255, 255, 0) 100%
-    );
-  }
-  ${props =>
-    props.css &&
-    props.css.map(
-      property =>
-        `.cards-slider.active-slide-${property.index} #card-${property.index} {
-     opacity: 1;
-     transform: scale(1);
-     background-color: #f3f3f3;
-     border-color: #f3f3f3;`
-    )};
 `;
 const Slider = styled.div`
   position: relative;
-  max-width: 296px;
+  max-width: 100%;
   height: 100%;
   margin: 0 auto;
-  &:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 600px;
-    /* border: 5px solid #61dafb; */
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
 `;
 const Wrapper = styled.div`
   display: flex;
-  position: absolute;
-  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  /* position: absolute;
+  transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); */
 `;
 const Card = styled.div`
   flex: 1;
@@ -114,7 +70,17 @@ export default () => {
   useEffect(() => {
     styleSetting();
   }, [property]);
+  const Image = () => {
+    let tempItems = [];
+    properties.map(property =>
+      tempItems.push(<img style={{ width: "100%" }} src={property.picture} />)
+    );
+    return tempItems;
+  };
 
+  useEffect(() => {
+    console.log(Image());
+  }, []);
   return (
     <>
       <Container className="swiper-container" css={properties}>
@@ -124,11 +90,11 @@ export default () => {
         >
           <Wrapper
             className="swiper-wrapper"
-            style={{
-              transition: ".3s linear",
-              transform: `translateX(calc(20% - ${property.index *
-                (100 / properties.length)}%))`
-            }}
+            // style={{
+            //   transition: ".3s linear",
+            //   transform: `translateX(calc(20% - ${property.index *
+            //     (100 / properties.length)}%))`
+            // }}
           >
             {/* {properties.length > 0 && (
             <Carousel
@@ -158,7 +124,7 @@ export default () => {
                 </Card>
               );
             })} */}
-            {properties.length > 0 &&
+            {/* {properties.length > 0 &&
               properties.map((property, i) => {
                 const styles = {
                   opacity: "1",
@@ -179,10 +145,11 @@ export default () => {
                     <Img src={property.picture} />
                   </Card>
                 );
-              })}
+              })} */}{" "}
+            <Carousel items={Image} active={0}></Carousel>
           </Wrapper>
         </Slider>
-        <Controls>
+        {/* <Controls>
           <Button onClick={prevProperty} disabled={property.index === 0}>
             Prev
           </Button>
@@ -192,7 +159,7 @@ export default () => {
           >
             Next
           </Button>
-        </Controls>
+        </Controls> */}
       </Container>
       <div style={{ width: "500px", height: "300px", position: "relative" }}>
         <Slide></Slide>

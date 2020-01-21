@@ -104,7 +104,9 @@ const files = {
     { index: 2, picture: require("../../assets/img_2.png") },
     { index: 3, picture: require("../../assets/img_3.png") },
     { index: 4, picture: require("../../assets/img_4.png") },
-    { index: 5, picture: require("../../assets/img_5.png") }
+    { index: 5, picture: require("../../assets/img_5.png") },
+    { index: 6, picture: require("../../assets/img_6.png") },
+    { index: 7, picture: require("../../assets/img_7.png") }
   ],
   grid: [
     require("../../assets/market_1.png"),
