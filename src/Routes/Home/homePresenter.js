@@ -39,6 +39,9 @@ const Box3 = styled.div`
     margin: auto;
     margin-bottom: 30px;
   }
+  .contentBox {
+    margin-bottom: 200px;
+  }
   .contentBox h3 {
     height: 71px;
     font-size: 28px;

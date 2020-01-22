@@ -38,10 +38,12 @@ export default props => {
     setDirection("right");
     setActive((newActive + 1) % items.length);
   };
+  const right = document.querySelector(".arrow-right");
+
   return (
     <div id="carousel" className="noselect">
       <div className="arrow arrow-left" onClick={moveLeft}>
-        <ArrowBackIos className="fi-arrow-left"></ArrowBackIos>
+        <ArrowBackIos></ArrowBackIos>
       </div>
       <ReactCSSTransitionGroup
         transitionName={direction}
@@ -51,7 +53,7 @@ export default props => {
         {generateItems()}
       </ReactCSSTransitionGroup>
       <div className="arrow arrow-right" onClick={moveRight}>
-        <ArrowForwardIos className="fi-arrow-right"></ArrowForwardIos>
+        <ArrowForwardIos></ArrowForwardIos>
       </div>
     </div>
   );

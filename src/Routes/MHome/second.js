@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import ThemeContext from "../../Context";
 import ReactPlayer from "react-player";
+import Carousel from "../Home/Sections/3_Effection/react_carousel/carousel";
+import Slider from "./drag/slide";
 
 const Box = styled.div`
   height: 100%;
@@ -41,11 +43,18 @@ const GridBox = styled.div`
   grid-template-rows: auto;
 `;
 const GridItem = styled.div`
-  width: 320px;
+  width: 100%;
+  overflow: hidden;
+  >div{
+  width : 320px;
+  margin-left : auto;
+  margin-right : auto;
+  }
 `;
 const ItemBox = styled.div`
   padding: 0;
-  margin-bottom: 70px;
+  margin : 0 auto;
+  margin-bottom : 70px;
 `;
 const GridImg = styled.div`
   ${props => props.theme.style.gridicon(56, 56, 0)}
@@ -104,6 +113,8 @@ const Market = styled.div`
   padding: 0 10px;
 `;
 const Card = styled.div`
+  width: 166px;
+  height: 300px;
   &:nth-child(1) {
     /* grid-column: 1 / span 10; */
     grid-row: 1 / span 3;
@@ -118,7 +129,9 @@ const Card = styled.div`
     grid-column: 1 / span 3;
   }
 `;
-const Img2 = styled.img``;
+const Img2 = styled.img`
+  width: 100%;
+`;
 const VideoBox = styled.div`
   max-width: 320px;
   margin: 0 auto;
@@ -143,6 +156,7 @@ const Video = styled(ReactPlayer).attrs({
     background-image: url(${props => props.theme.file.allaBg}) !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
+    background-position : top !important;
   }
   .react-player__shadow {
     all: unset !important;
@@ -159,7 +173,39 @@ const Video = styled(ReactPlayer).attrs({
     background-repeat: no-repeat !important;
   }
 `;
+const CarouselBox = styled.div`
+  width: 100%;
+  height: 286px;
+  margin-bottom: 100px;
+  #carousel {
+    height: 286px;
+    position: relative;
+    .arrow-right {
+      right: 0;
+    }
+    .arrow-left {
+      left: 0;
+    }
+    .arrow:hover {
+    }
+  }
+  .item {
+    width: 140px;
+    height: 286px;
+  }
+`;
+
 const Second = () => {
+  const con = useContext(ThemeContext);
+  const [properties, setProperties] = useState(con.slide); //이미지들
+
+  const Image = () => {
+    let tempItems = [];
+    properties.map(property =>
+      tempItems.push(<img style={{ width: "100%" }} src={property.picture} />)
+    );
+    return tempItems;
+  };
   return (
     <Box>
       <Pbox>
@@ -220,7 +266,12 @@ const Second = () => {
             </GridContent>
           </ItemBox>
         </GridItem>
-        <GridItem></GridItem>
+        <GridItem >
+          <CarouselBox style={{minWidth : "320px"}}>
+            {/* <Carousel items={Image} active={0}></Carousel> */}
+            <Slider></Slider>
+          </CarouselBox>
+        </GridItem>
         <GridItem>
           <ItemBox>
             <GridImg>

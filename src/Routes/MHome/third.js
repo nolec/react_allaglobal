@@ -72,9 +72,7 @@ const Third = () => {
   return (
     <Box>
       <BgBox>
-        <img
-          src={require("../../assets/Free-Perspective-View-iPhone-X-Mockup.png")}
-        />
+        <img src={require("../../assets/iphone_m.png")} />
       </BgBox>
       <ContentBox>
         <HBox>

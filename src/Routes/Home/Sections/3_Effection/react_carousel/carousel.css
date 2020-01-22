@@ -28,6 +28,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #def7ff;
+  color: #4e75c9;
+}
+.arrow:hover {
+  transition: 0.2s linear;
+  background-color: #4e75c9;
+  color: #def7ff;
+}
+.arrow-left svg {
+  margin-left: 8px;
 }
 .arrow-left {
   left: 50px;
@@ -48,18 +58,18 @@
   line-height: 150px;
   /* background-color: #228291; */
   left: 50%;
-  transform: translate(calc(-50% - 2 * 295px)) scale(0.7);
-  opacity: 0.7;
-  transition: 0.5s linear;
+  transform: translate(calc(-50% - 2 * 300px)) scale(0.7);
+  opacity: 1;
+  transition: opacity 1s, left 0.3s, transform 0.5s;
 }
 
 .level-1 {
   line-height: 180px;
   /* background-color: #6796e5; */
   left: 50%;
-  transform: translate(calc(-50% - 1 * 295px)) scale(0.7);
-  opacity: 0.8;
-  transition: 0.5s linear;
+  transform: translate(calc(-50% - 1 * 320px)) scale(0.7);
+  opacity: 1;
+  transition: 0.5s;
 }
 
 .level0 {
@@ -68,51 +78,51 @@
   left: 50%;
   transform: translate(-50%) scale(1);
   opacity: 1;
-  transition: 0.5s linear;
+  transition: 0.5s;
 }
 
 .level1 {
   line-height: 180px;
   /* background-color: #6796e5; */
   left: 50%;
-  transform: translate(calc(-50% + 1 * 295px)) scale(0.7);
-  opacity: 0.8;
-  transition: 0.5s linear;
+  transform: translate(calc(-50% + 1 * 320px)) scale(0.7);
+  opacity: 1;
+  transition: 0.5s;
 }
 
 .level2 {
   line-height: 150px;
   /* background-color: #228291; */
   left: 50%;
-  transform: translate(calc(-50% + 2 * 295px)) scale(0.7);
-  opacity: 0.7;
-  transition: 0.5s linear;
+  transform: translate(calc(-50% + 2 * 300px)) scale(0.7);
+  opacity: 1;
+  transition: opacity 0.5s, left 0.3s, transform 0.5s;
 }
 
 .left-enter {
-  opacity: 1;
-  /* opacity: 0; */
-  height: 120px;
-  width: 90px;
+  opacity: 0;
+  left: 50%;
 }
 
 .left-enter.left-enter-active {
   opacity: 1;
+  transition: opacity 1.5s;
 }
 
 .left-leave {
-  opacity: 1;
-  left: 0;
+  opacity: 0;
+  left: 45%;
+  transition: opacity 0.5s, left 1s;
 }
 
 .left-leave.left-leave-active {
-  /* opacity: 0; */
-  opacity: 1;
+  opacity: 0;
 }
 
 .right-enter {
   opacity: 0;
-  left: 30%;
+  left: 50%;
+  transition: opacity 1.5s;
 }
 
 .right-enter.right-enter-active {
@@ -123,12 +133,12 @@
   opacity: 1;
   /* transform: translateX(100%); */
   left: 100%;
-  transition: left 4s linear;
+  transition: left 4s;
 }
 
 .right-leave.right-leave-active {
   opacity: 0;
-  transition: 0.3s linear;
+  transition: 0.3s;
 }
 
 .noselect {

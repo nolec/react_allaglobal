@@ -78,9 +78,6 @@ export default () => {
     return tempItems;
   };
 
-  useEffect(() => {
-    console.log(Image());
-  }, []);
   return (
     <>
       <Container className="swiper-container" css={properties}>
@@ -161,9 +158,9 @@ export default () => {
           </Button>
         </Controls> */}
       </Container>
-      <div style={{ width: "500px", height: "300px", position: "relative" }}>
+      {/* <div style={{ width: "500px", height: "300px", position: "relative" }}>
         <Slide></Slide>
-      </div>
+      </div> */}
     </>
   );
 };

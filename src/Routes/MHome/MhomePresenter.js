@@ -86,6 +86,7 @@ const BgBox = styled.div`
   margin-top: 43px;
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: contain;
   width: 100%;
   height: 262px;
   background-image: url(${props => props.theme.file.mphone_1});

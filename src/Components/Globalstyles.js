@@ -21,7 +21,7 @@ ${reset};
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 900px;
+        height: 1100px;
         background-repeat: no-repeat;
         background-position: bottom center;
         background-image: url(${require("../assets/bg2.png")});
