@@ -19,10 +19,11 @@ const Title = styled.h1`
   letter-spacing: normal;
   display: inline-block;
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 0px;
 `;
 const Content = styled.div``;
 const Wrapper = styled.div`
+  margin-top: 168px;
   max-width: 1200px;
   width: 100%;
   display: flex;
@@ -81,25 +82,31 @@ const BgBox = styled.div`
     &:nth-of-type(1) {
       z-index: 1;
       ${Img} {
-        width: 319px;
-        height: 642px;
+        width: 300px;
+        height: 600px;
         margin: auto;
         display: block;
       }
     }
     &:nth-of-type(2) {
-      width: 269px;
-      height: 547px;
+      width: 250px;
+      height: 500px;
       position: absolute;
       left: 0;
       top: 47px;
+      img {
+        width: 100%;
+      }
     }
     &:nth-of-type(3) {
-      width: 269px;
-      height: 547px;
+      width: 250px;
+      height: 500px;
       position: absolute;
       right: 0;
       top: 47px;
+      img {
+        width: 100%;
+      }
     }
   }
 `;

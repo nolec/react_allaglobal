@@ -45,16 +45,16 @@ const GridBox = styled.div`
 const GridItem = styled.div`
   width: 100%;
   overflow: hidden;
-  >div{
-  width : 320px;
-  margin-left : auto;
-  margin-right : auto;
+  > div {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
   }
 `;
 const ItemBox = styled.div`
   padding: 0;
-  margin : 0 auto;
-  margin-bottom : 70px;
+  margin: 0 auto;
+  margin-bottom: 70px;
 `;
 const GridImg = styled.div`
   ${props => props.theme.style.gridicon(56, 56, 0)}
@@ -266,8 +266,8 @@ const Second = () => {
             </GridContent>
           </ItemBox>
         </GridItem>
-        <GridItem >
-          <CarouselBox style={{minWidth : "320px"}}>
+        <GridItem>
+          <CarouselBox style={{ minWidth: "100%" }}>
             {/* <Carousel items={Image} active={0}></Carousel> */}
             <Slider></Slider>
           </CarouselBox>

@@ -23,7 +23,7 @@ ${reset};
         width: 100%;
         height: 1100px;
         background-repeat: no-repeat;
-        background-position: bottom center;
+        background-position: center 50px;
         background-image: url(${require("../assets/bg2.png")});
         transform: rotate(180deg);
         z-index: -1;

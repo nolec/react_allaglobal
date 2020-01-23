@@ -3,7 +3,7 @@
 #carousel {
   position: absolute;
   height: 600px;
-  /* max-width: 1750px; */
+  max-width: 1750px;
   width: 100%;
   margin: auto;
   left: 0;
@@ -28,13 +28,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #def7ff;
-  color: #4e75c9;
+  background-color: #f3f5f5;
+  color: #8c8c8c;
 }
 .arrow:hover {
-  transition: 0.2s linear;
-  background-color: #4e75c9;
-  color: #def7ff;
+  transition: 0.2s ease-in-out;
+  background-color: #8c8c8c;
+  color: #f3f5f5;
 }
 .arrow-left svg {
   margin-left: 8px;
