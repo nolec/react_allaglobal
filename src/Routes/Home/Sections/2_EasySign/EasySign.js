@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
+import Scene from "../../../../ScrollMagic";
 
 const Box = styled.div`
   ${props => props.theme.style.boxStyle}
+  .active {
+    opacity: 1;
+    transition: 0.5s linear;
+  }
   margin-bottom: 100px;
   .grid-box {
     width: 100%;
@@ -19,6 +24,12 @@ const Box = styled.div`
     p:last-child {
       margin-top: 20px;
     }
+  }
+`;
+const Wrapper = styled.div`
+  > * {
+    opacity: 0;
+    transform: translateY(-100px);
   }
 `;
 const Title = styled.h2`
@@ -39,9 +50,13 @@ const Img2 = styled.img.attrs({
   src: props => props.theme.file.easySign
 })``;
 export default () => {
+  const easySign = useRef(null);
+  useEffect(() => {
+    Scene(easySign.current.children, 0.7);
+  }, []);
   return (
     <Box id="section2">
-      <div>
+      <Wrapper ref={easySign}>
         <Title>
           한 눈에 모아보는 수익 현황,이제 읽지 말고 직접 확인해보세요.
         </Title>
@@ -73,7 +88,7 @@ export default () => {
             </div>
           </div>
         </div>
-      </div>
+      </Wrapper>
     </Box>
   );
 };

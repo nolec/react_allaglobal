@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "@material-ui/core";
 import Card from "./Card";
-import { device } from "../../../../device";
 // import { AutoRotatingCarousel } from "material-auto-rotating-carousel";
 
 const Box = styled.div`

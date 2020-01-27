@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
+import Scene from "../../../../ScrollMagic";
 
 const Box = styled.div`
   ${props => props.theme.style.boxStyle}
@@ -28,6 +29,15 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  > div {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  .active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s linear;
+  }
 `;
 const Infor = styled.p`
   width: 347px;
@@ -110,11 +120,14 @@ const BgBox = styled.div`
     }
   }
 `;
-
 export default () => {
+  const wallet = useRef(null);
+  useEffect(() => {
+    Scene(wallet.current.children, 1);
+  }, []);
   return (
     <Box id="section1">
-      <Wrapper>
+      <Wrapper ref={wallet}>
         <ContentBox>
           <Title>AllA Wallet</Title>
           <Content>
