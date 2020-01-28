@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import Grid from "./Grid";
+import Scene from "../../../../ScrollMagic";
 
 const Box = styled.div`
   overflow: hidden;
@@ -17,6 +18,8 @@ const Box = styled.div`
   }
   .grid-item {
     margin-top: 100px;
+    opacity: 0;
+    transform: translateY(-150px);
   }
   .grid-pbox {
     max-width: 425px;
@@ -64,10 +67,14 @@ const Img = styled.img.attrs({
   src: props => props.theme.file.icon_3
 })``;
 export default () => {
+  const market = useRef(null);
+  useEffect(() => {
+    Scene(market.current.children, 0.8);
+  }, []);
   return (
     <Box id="section4">
       <div className="grid-box">
-        <div>
+        <div ref={market}>
           <div className="grid-item">
             <GridIcon>
               <Img />

@@ -29,7 +29,7 @@ const Box = styled.div`
 const Wrapper = styled.div`
   > * {
     opacity: 0;
-    transform: translateY(-100px);
+    transform: translateY(-150px);
   }
 `;
 const Title = styled.h2`

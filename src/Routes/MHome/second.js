@@ -1,8 +1,7 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import ThemeContext from "../../Context";
 import ReactPlayer from "react-player";
-import Carousel from "../Home/Sections/3_Effection/react_carousel/carousel";
 import Slider from "./drag/slide";
 
 const Box = styled.div`
@@ -196,16 +195,16 @@ const CarouselBox = styled.div`
 `;
 
 const Second = () => {
-  const con = useContext(ThemeContext);
-  const [properties, setProperties] = useState(con.slide); //이미지들
+  // const con = useContext(ThemeContext);
+  // const properties = con.slide; //이미지들
 
-  const Image = () => {
-    let tempItems = [];
-    properties.map(property =>
-      tempItems.push(<img style={{ width: "100%" }} src={property.picture} />)
-    );
-    return tempItems;
-  };
+  // const Image = () => {
+  //   let tempItems = [];
+  //   properties.map(property =>
+  //     tempItems.push(<img style={{ width: "100%" }} src={property.picture} />)
+  //   );
+  //   return tempItems;
+  // };
   return (
     <Box>
       <Pbox>
@@ -219,7 +218,10 @@ const Second = () => {
         <GridItem>
           <ItemBox>
             <GridImg>
-              <img src={require("../../assets/service_icon.svg")} />
+              <img
+                src={require("../../assets/service_icon.svg")}
+                alt="service"
+              />
             </GridImg>
             <GridContent>
               <h3>손쉬운 서비스 가입</h3>
@@ -246,7 +248,7 @@ const Second = () => {
         <GridItem>
           <ItemBox>
             <GridImg>
-              <img src={require("../../assets/mining_icon.svg")} />
+              <img src={require("../../assets/mining_icon.svg")} alt="mining" />
             </GridImg>
             <GridContent>
               <h3 style={{ letterSpacing: "-0.84px" }}>
@@ -275,7 +277,7 @@ const Second = () => {
         <GridItem>
           <ItemBox>
             <GridImg>
-              <img src={require("../../assets/market_icon.svg")} />
+              <img src={require("../../assets/market_icon.svg")} alt="market" />
             </GridImg>
             <GridContent>
               <h3>스마트한 쇼핑, 마켓</h3>
@@ -294,7 +296,7 @@ const Second = () => {
               <Market>
                 {theme.Mgrid.map((img, i) => (
                   <Card key={i}>
-                    <Img2 src={img} />
+                    <Img2 src={img} alt="market" />
                   </Card>
                 ))}
               </Market>
@@ -306,7 +308,7 @@ const Second = () => {
             <GridImg
               style={{ width: "58px", height: "58px", marginBottom: "17px" }}
             >
-              <img src={require("../../assets/video_icon.svg")} />
+              <img src={require("../../assets/video_icon.svg")} alt="video" />
             </GridImg>
             <GridContent>
               <h3>현명한 사람들의 선택 Alla</h3>

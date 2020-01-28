@@ -1,6 +1,5 @@
-import React, { useRef, useLayoutEffect } from "react";
+import React from "react";
 import styled from "styled-components";
-import { TweenLite } from "gsap";
 import Second from "./second";
 import Third from "./third";
 import PdfFile from "../../assets/AllA_Whitepaper_KR_1.0.134c5d76.pdf";

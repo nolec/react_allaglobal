@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
-import { Button } from "@material-ui/core";
 import ReactPlayer from "react-player";
+import Scene from "../../../../ScrollMagic";
 
 const Box = styled.div`
   overflow: hidden;
@@ -10,6 +10,10 @@ const Box = styled.div`
   margin-top: 50px;
   position: relative;
   padding-bottom: 30px;
+  > div {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
   .grid-box {
     width: 100%;
     display: grid;
@@ -104,8 +108,12 @@ const Img = styled.img.attrs({
 export default () => {
   const video = useRef(null);
 
+  useEffect(() => {
+    Scene(video.current.children, 0.8);
+  }, []);
+
   return (
-    <Box id="section5">
+    <Box id="section5" ref={video}>
       <div className="grid-box">
         <div>
           <div className="grid-item">

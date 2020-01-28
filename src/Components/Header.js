@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 import PdfFile from "../assets/AllA_Whitepaper_KR_1.0.134c5d76.pdf";
 
 const Header = styled.header`
@@ -101,7 +101,7 @@ export default () => {
             offset={-70}
             duration={500}
           >
-            <img src={require("../assets/alla_logo.svg")} />
+            <img src={require("../assets/alla_logo.svg")} alt="logo" />
           </Title>
         </TitleBox>
         <NavBox>

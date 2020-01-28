@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { reset } from "styled-reset";
 import { isMobile } from "react-device-detect";
-import { device } from "../device";
 
 const globalstyles = createGlobalStyle`
 ${reset};
@@ -30,6 +29,7 @@ ${reset};
   }
      }
      body{
+        scroll-behavior : smooth;
          font-size: 14px;
          font-family : "notopen_numbers";
          height : 100%;

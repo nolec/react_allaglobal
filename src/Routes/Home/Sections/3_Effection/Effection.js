@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import Scene from "../../../../ScrollMagic";
 // import { AutoRotatingCarousel } from "material-auto-rotating-carousel";
 
 const Box = styled.div`
@@ -24,6 +25,12 @@ const Box = styled.div`
     }
   }
 `;
+const Div = styled.div`
+  > div {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+`;
 const GridIcon = styled.div`
   ${props => props.theme.style.gridicon(114, 114, 0)}
   margin-bottom: 24px;
@@ -36,10 +43,14 @@ const Img = styled.img.attrs({
   src: props => props.theme.file.icon_2
 })``;
 export default () => {
+  const effection = useRef(null);
+  useEffect(() => {
+    Scene(effection.current.children, 0.8);
+  }, []);
   return (
     <Box id="section3">
       <div className="grid-box">
-        <div>
+        <Div ref={effection}>
           <div className="grid-item">
             <GridIcon>
               <Img />
@@ -58,7 +69,7 @@ export default () => {
               </div>
             </GridContent>
           </div>
-        </div>
+        </Div>
       </div>
       <Card />
     </Box>

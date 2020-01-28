@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import ThemeContext from "../../../../Context";
+import Scene from "../../../../ScrollMagic";
 
 const Warpper = styled.div`
   display: flex;
@@ -17,6 +18,8 @@ const GridBox = styled.div`
   grid-auto-flow: column;
 `;
 const Card = styled.div`
+  opacity: 0;
+  transform: translateY(-150px);
   &:nth-child(1) {
     grid-row: 1 / span 2;
     position: relative;
@@ -51,11 +54,15 @@ const Card = styled.div`
 `;
 const Img = styled.img``;
 export default () => {
+  const card = useRef(null);
+  useEffect(() => {
+    Scene(card.current.children, 0.8);
+  }, []);
   return (
     <ThemeContext.Consumer>
       {theme => (
         <Warpper>
-          <GridBox>
+          <GridBox ref={card}>
             {theme.grid.map((img, i) => (
               <Card key={i}>
                 <Img src={img} />

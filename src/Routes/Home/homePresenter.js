@@ -1,5 +1,4 @@
-import React, { useRef, useLayoutEffect, useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import React from "react";
 import styled from "styled-components";
 import AllaWallet from "./Sections/1_AllaWallet";
 import EasySign from "./Sections/2_EasySign";
@@ -7,7 +6,7 @@ import Effection from "./Sections/3_Effection";
 import Market from "./Sections/4_Market";
 import Video from "./Sections/5_Video";
 import Last from "./Sections/6_last";
-import { useTransition, animated, useSpring } from "react-spring";
+import { animated, useSpring } from "react-spring";
 
 const Container = styled(animated.div)`
   .col {

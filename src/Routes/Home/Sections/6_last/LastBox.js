@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
+import Scene from "../../../../ScrollMagic";
 const PdfFile = require("../../../../assets/AllA_Whitepaper_KR_1.0.134c5d76.pdf");
 
 const Box = styled.div`
@@ -60,11 +61,21 @@ const Box = styled.div`
     background-image: url(${require("../../../../assets/download_btn1.svg")});
   }
 `;
+const Div = styled.div`
+  > div {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+`;
 
 export default () => {
+  const last = useRef(null);
+  useEffect(() => {
+    Scene(last.current.children, 0.8);
+  }, []);
   return (
     <Box>
-      <div>
+      <Div ref={last}>
         <div className="imgBox">
           <img src={require("../../../../assets/X-Mockup.png")} alt="allaimg" />
         </div>
@@ -77,10 +88,10 @@ export default () => {
           </div>
 
           <div className="download-btn">
-            <a href={PdfFile} target="_blank"></a>
+            <a href={PdfFile} target="_blank" rel="noopener noreferrer"></a>
           </div>
         </div>
-      </div>
+      </Div>
     </Box>
   );
 };

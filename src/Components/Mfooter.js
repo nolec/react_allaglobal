@@ -66,8 +66,8 @@ const ButtonBox = styled.div`
       content: "";
       width: 1px;
       height: 80%;
-      top : 50%;
-      transform : translateY(-50%);
+      top: 50%;
+      transform: translateY(-50%);
       background-color: #fff;
       position: absolute;
       right: 0;
@@ -78,10 +78,10 @@ export default () => {
   return (
     <Footer>
       <ButtonBox>
-        <a href={Privacy} target="_blank">
+        <a href={Privacy} target="_blank" rel="noopener noreferrer">
           Privacy Policy
         </a>
-        <a href={Terms} target="_blank">
+        <a href={Terms} target="_blank" rel="noopener noreferrer">
           Terms &#38; Conditions
         </a>
       </ButtonBox>

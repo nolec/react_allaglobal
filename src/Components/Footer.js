@@ -45,10 +45,14 @@ export default () => {
     <Footer>
       <p>Copyright © 2019 ALLA CLASSIC GLOBAL PTE. LTD. All rights reserved.</p>
       <ButtonBox>
-        <a href="http://localhost:3000/PDF.html" target="_blank">
+        <a
+          href={require("../assets/privacy_policy_AllA.pdf")}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Privacy Policy
         </a>
-        <a href={Terms} target="_blank">
+        <a href={Terms} target="_blank" rel="noopener noreferrer">
           Terms &#38; Conditions
         </a>
       </ButtonBox>

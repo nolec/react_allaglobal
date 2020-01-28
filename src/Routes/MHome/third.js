@@ -72,7 +72,7 @@ const Third = () => {
   return (
     <Box>
       <BgBox>
-        <img src={require("../../assets/iphone_m.png")} />
+        <img src={require("../../assets/iphone_m.png")} alt="iphone" />
       </BgBox>
       <ContentBox>
         <HBox>
@@ -82,7 +82,7 @@ const Third = () => {
           <p>AllA Wallet으로 블록체인 신기술을 체험할 차례입니다.</p>
         </PBox>
         <DownBtn>
-          <a href={PdfFile} target="_blank"></a>
+          <a href={PdfFile} target="_blank" rel="noopener noreferrer"></a>
         </DownBtn>
       </ContentBox>
     </Box>

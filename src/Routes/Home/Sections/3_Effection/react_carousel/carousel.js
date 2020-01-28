@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import { ArrowForwardIos, ArrowBackIos } from "@material-ui/icons";
 import "./carousel.css";
@@ -6,9 +6,9 @@ import "./carousel.css";
 export default props => {
   const [direction, setDirection] = useState("");
   const [active, setActive] = useState(props.active);
-  const [items, setItems] = useState(props.items);
+  const items = props.items;
 
-  console.log(props, active, items);
+  // console.log(props, active, items);
   const generateItems = () => {
     let ItemComponent = [];
     let level;
@@ -22,7 +22,7 @@ export default props => {
       }
       level = active - i;
       ItemComponent.push(<Item key={index} id={items[index]} level={level} />);
-      console.log(ItemComponent);
+      // console.log(ItemComponent);
     }
     return ItemComponent;
   };
@@ -38,7 +38,6 @@ export default props => {
     setDirection("right");
     setActive((newActive + 1) % items.length);
   };
-  const right = document.querySelector(".arrow-right");
 
   return (
     <div id="carousel" className="noselect">
@@ -59,7 +58,7 @@ export default props => {
   );
 };
 const Item = props => {
-  console.log(props);
+  // console.log(props);
   const level = props.level;
   const className = "item level" + level;
   return <div className={className}>{props.id}</div>;
