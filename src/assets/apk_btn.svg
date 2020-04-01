@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="271" height="60" viewBox="0 0 271 60">
+    <defs>
+        <style>
+            .prefix__cls-4,.prefix__cls-5{fill:#fff}.prefix__cls-3{fill:none}.prefix__cls-5{stroke:#fff;stroke-linecap:square;stroke-width:.5px}
+        </style>
+    </defs>
+    <g id="prefix__apk_btn" transform="translate(-14.108 .954)">
+        <text id="prefix__APK_DOWNLOAD" data-name="APK DOWNLOAD" transform="translate(94.108 38.046)" style="font-size:21px;font-family:SegoeUI,Segoe UI;fill:#fff">
+            <tspan x="0" y="0">APK DOWNLOAD</tspan>
+        </text>
+        <g id="prefix__사각형_2164" data-name="사각형 2164" transform="translate(14.108 -.954)" style="stroke-width:3px;stroke:#fff;fill:none">
+            <rect width="271" height="60" rx="30" style="stroke:none"/>
+            <rect width="268" height="57" x="1.5" y="1.5" class="prefix__cls-3" rx="28.5"/>
+        </g>
+        <g id="prefix__icon_android" transform="translate(-57.466 15.875)">
+            <path id="prefix__bg_collider" d="M0 0H30V30H0z" class="prefix__cls-3" transform="translate(101.574 -1.83)"/>
+            <g id="prefix__그룹_358" data-name="그룹 358" transform="translate(101.964 10.929)">
+                <path id="prefix__빼기_9" d="M29.182 14.081H0V13.5A13.54 13.54 0 0 1 13.5 0h2.18a13.54 13.54 0 0 1 13.5 13.5v.578zm-8-9.589a1.959 1.959 0 1 0 1.385.574 1.948 1.948 0 0 0-1.389-.573zM8 4.493a1.96 1.96 0 1 0 1.384.574A1.946 1.946 0 0 0 8 4.493z" class="prefix__cls-4" data-name="빼기 9" transform="translate(0 2.672)"/>
+                <path id="prefix__패스_1199" d="M160.955 67.62a.579.579 0 1 0 .818-.819l-4.711-4.711a.579.579 0 0 0-.819.819z" class="prefix__cls-5" data-name="패스 1199" transform="translate(-155.056 -61.92)"/>
+                <path id="prefix__패스_1200" d="M296.674 66.8a.579.579 0 0 0 .819.819l4.711-4.711a.579.579 0 0 0-.818-.819z" class="prefix__cls-5" data-name="패스 1200" transform="translate(-274.316 -61.92)"/>
+            </g>
+            <path id="prefix__합치기_6" d="M0 6.5h3.176V0h4.646v6.5H11L5.5 13z" class="prefix__cls-4" data-name="합치기 6" transform="translate(110.574 -1.83)"/>
+        </g>
+    </g>
+</svg>

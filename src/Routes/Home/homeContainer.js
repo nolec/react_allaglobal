@@ -79,6 +79,11 @@ export const theme = {
   file: {
     andUrl: require("../../assets/google_btn.svg"),
     iosUrl: require("../../assets/apple_btn.svg"),
+    apkUrl: require("../../assets/apk_btn.svg"),
+    andMobile: require("../../assets/btn_google.svg"),
+    iosMobile: require("../../assets/btn_apple.svg"),
+    apkMobile: require("../../assets/btn_apk.svg"),
+    bizMobile: require("../../assets/btn_biz_plan.svg"),
     phone_1: require("../../assets/1.png"),
     phone_2: require("../../assets/img_2_1.png"),
     phone_3: require("../../assets/img_3_1.png"),

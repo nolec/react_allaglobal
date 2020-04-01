@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="154" height="39" viewBox="0 0 154 39">
+    <defs>
+        <style>
+            .prefix__cls-4,.prefix__cls-5{fill:#fff}.prefix__cls-5{stroke:#fff;stroke-linecap:square;stroke-width:.5px}
+        </style>
+    </defs>
+    <g id="prefix__btn_apk">
+        <g id="prefix__패스_8" data-name="패스 8" style="stroke-miterlimit:10;fill:none">
+            <path d="M1353.857 681.5c0 10.77-9.057 19.5-20.231 19.5h-113.537c-11.172 0-20.232-8.73-20.232-19.5s9.06-19.5 20.232-19.5h113.537c11.174 0 20.231 8.73 20.231 19.5z" style="stroke:none" transform="translate(-1199.857 -662)"/>
+            <path d="M1333.626 699c4.884 0 9.472-1.83 12.918-5.151 3.426-3.303 5.313-7.688 5.313-12.349 0-4.66-1.887-9.046-5.313-12.349-3.446-3.322-8.034-5.151-12.918-5.151h-113.537c-4.884 0-9.471 1.83-12.918 5.151-3.427 3.303-5.314 7.689-5.314 12.35 0 4.66 1.887 9.045 5.314 12.348 3.447 3.322 8.034 5.151 12.918 5.151h113.537m0 2h-113.537c-11.172 0-20.232-8.73-20.232-19.5s9.06-19.5 20.232-19.5h113.537c11.174 0 20.231 8.73 20.231 19.5s-9.057 19.5-20.231 19.5z" style="stroke:none;fill:#fff" transform="translate(-1199.857 -662)"/>
+        </g>
+        <text id="prefix__APK_Download" data-name="APK Download" transform="translate(46 25)" style="font-size:14px;font-family:SegoeUI,Segoe UI;fill:#fff">
+            <tspan x="0" y="0">APK Download</tspan>
+        </text>
+        <g id="prefix__icon_android" transform="translate(19 11.356)">
+            <path id="prefix__bg_collider" d="M0 0H15.909V15.969H0z" transform="translate(.059 -.356)" style="fill:none"/>
+            <g id="prefix__그룹_358" data-name="그룹 358" transform="translate(0 6.406)">
+                <path id="prefix__빼기_9" d="M16 7.764H0v-.319a7.414 7.414 0 0 1 2.174-5.258A7.331 7.331 0 0 1 7.4 0h1.2a7.329 7.329 0 0 1 5.229 2.187A7.414 7.414 0 0 1 16 7.445v.319zm-4.389-5.287a1.077 1.077 0 0 0-1.074 1.08 1.076 1.076 0 0 0 .314.764 1.07 1.07 0 0 0 1.519 0 1.084 1.084 0 0 0 0-1.527 1.064 1.064 0 0 0-.759-.317zm-7.222 0a1.064 1.064 0 0 0-.759.317 1.083 1.083 0 0 0 0 1.527 1.069 1.069 0 0 0 1.518 0 1.083 1.083 0 0 0 0-1.527 1.063 1.063 0 0 0-.759-.317z" class="prefix__cls-4" data-name="빼기 9" transform="translate(0 1.473)"/>
+                <path id="prefix__패스_1199" d="M158.765 65.063a.319.319 0 0 0 .451-.451l-2.6-2.6a.319.319 0 0 0-.451.451z" class="prefix__cls-5" data-name="패스 1199" transform="translate(-155.512 -61.92)"/>
+                <path id="prefix__패스_1200" d="M296.6 64.611a.319.319 0 1 0 .451.451l2.6-2.6a.319.319 0 0 0-.451-.451z" class="prefix__cls-5" data-name="패스 1200" transform="translate(-284.361 -61.92)"/>
+            </g>
+            <path id="prefix__합치기_6" d="M0 3.5h1.732V0h2.535v3.5H6L3 7z" class="prefix__cls-4" data-name="합치기 6" transform="translate(5.013 -.356)"/>
+        </g>
+    </g>
+</svg>

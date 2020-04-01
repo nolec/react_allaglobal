@@ -15,7 +15,7 @@ const Container = styled(animated.div)`
   ::before {
     content: "";
     position: absolute;
-    top: -3%;
+    top: -2%;
     left: 0;
     width: 100%;
     height: 1200px;

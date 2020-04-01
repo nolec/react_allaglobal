@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__btn_biz_plan" width="154" height="39" viewBox="0 0 154 39">
+    <g id="prefix__패스_8" data-name="패스 8" style="stroke-miterlimit:10;fill:none">
+        <path d="M1353.857 681.5c0 10.77-9.057 19.5-20.231 19.5h-113.537c-11.172 0-20.232-8.73-20.232-19.5s9.06-19.5 20.232-19.5h113.537c11.174 0 20.231 8.73 20.231 19.5z" style="stroke:none" transform="translate(-1199.857 -662)"/>
+        <path d="M1333.626 699c4.884 0 9.472-1.83 12.918-5.151 3.426-3.303 5.313-7.688 5.313-12.349 0-4.66-1.887-9.046-5.313-12.349-3.446-3.322-8.034-5.151-12.918-5.151h-113.537c-4.883 0-9.471 1.83-12.918 5.151-3.427 3.303-5.314 7.689-5.314 12.35 0 4.66 1.887 9.045 5.314 12.348 3.447 3.322 8.034 5.151 12.918 5.151h113.537m0 2h-113.537c-11.172 0-20.232-8.73-20.232-19.5s9.06-19.5 20.232-19.5h113.537c11.174 0 20.23 8.73 20.23 19.5s-9.056 19.5-20.23 19.5z" style="stroke:none;fill:#fff" transform="translate(-1199.857 -662)"/>
+    </g>
+    <text id="prefix__Biz_Plan" data-name="Biz Plan" transform="translate(45 25)" style="font-size:14px;font-family:SegoeUI,Segoe UI;fill:#fff">
+        <tspan x="0" y="0">Biz Plan</tspan>
+    </text>
+    <path id="prefix__패스_14" d="M9137.072 36.964l6 5.311-6 4.689" data-name="패스 14" transform="translate(-9020.072 -21.964)" style="stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;fill:none"/>
+</svg>

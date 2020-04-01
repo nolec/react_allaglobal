@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Second from "./second";
 import Third from "./third";
 import PdfFile from "../../assets/AllA_Whitepaper_KR_1.0.134c5d76.pdf";
+import { minDevice } from "../../device";
+import { theme } from "../Home/homeContainer";
 
 const Container = styled.div`
   width: 100%;
@@ -12,7 +14,7 @@ const Container = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 411px;
+    height: 450px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -58,28 +60,33 @@ const Infor = styled.p`
   letter-spacing: 0.3px;
   text-align: center;
   color: #ffffff;
+  margin: auto;
   margin-bottom: 26px;
 `;
-const AndroidBtn = styled.a`
-  background-image: url(${props => props.andUrl});
-`;
-const IOSBtn = styled.a`
-  background-image: url(${props => props.iosUrl});
-  cursor: pointer;
-`;
+const AndroidBtn = styled.a``;
+const IOSBtn = styled.a``;
+const APKBtn = styled.a``;
+const BIZBtn = styled.a``;
+
 const ButtonBox = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: 100px;
   a {
     width: 150px;
     height: 39px;
-    background-size: cover;
+    display: block;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+    img {
+      width: 100%;
+    }
+    ${minDevice.minPC640`margin : 0 2px;`}
   }
 `;
-
 const BgBox = styled.div`
   position: relative;
   margin-top: 43px;
@@ -120,6 +127,7 @@ const BgBox = styled.div`
     z-index: -1;
   }
 `;
+
 const MhomePresenter = () => (
   <Container>
     <Box>
@@ -136,12 +144,18 @@ const MhomePresenter = () => (
               href={
                 "https://play.google.com/store/apps/details?id=io.allawallet.allaglobal"
               }
-              andUrl={require("../../assets/google_btn.png")}
-            />
-            <IOSBtn
-              href={PdfFile}
-              iosUrl={require("../../assets/biz_plan_btn.png")}
-            />
+            >
+              <img src={theme.file.andMobile} alt="andMobile" />
+            </AndroidBtn>
+            <IOSBtn href="https://itunes.apple.com/app/id1500534759">
+              <img src={theme.file.iosMobile} alt="iosMobile" />
+            </IOSBtn>
+            <APKBtn href="https://www.allaglobal.com/download/AllAWallet.apk">
+              <img src={theme.file.apkMobile} alt="apkMobile" />
+            </APKBtn>
+            <BIZBtn href={PdfFile}>
+              <img src={theme.file.bizMobile} alt="bizMobile" />
+            </BIZBtn>
           </ButtonBox>
         </Content>
         <BgBox></BgBox>

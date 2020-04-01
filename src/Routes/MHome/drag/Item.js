@@ -99,8 +99,8 @@ export default ({ items }) => {
   return (
     <Div id="panelWrap">
       <Swiper {...params}>
-        {items.map(item => (
-          <Section>{item}</Section>
+        {items.map((item, i) => (
+          <Section key={i}>{item}</Section>
         ))}
       </Swiper>
     </Div>

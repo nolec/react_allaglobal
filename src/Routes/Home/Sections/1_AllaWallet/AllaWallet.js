@@ -56,30 +56,32 @@ const AndroidBtn = styled.a`
 const IOSBtn = styled.a`
   background-image: url(${props => props.theme.file.iosUrl});
 `;
+const APKBtn = styled.a`
+  background-image: url(${props => props.theme.file.apkUrl});
+`;
 const ButtonBox = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   a {
-    width: 230px;
+    width: 270px;
     height: 60px;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    :not(:last-child) {
-      margin-right: 30.4px;
+    :not(:first-child) {
+      margin-top: 20px;
     }
   }
 `;
-const Img = styled.img.attrs({
-  src: props => props.theme.file.phone_1
-})``;
-const Img2 = styled.img.attrs({
-  src: props => props.theme.file.phone_2
-})``;
-const Img3 = styled.img.attrs({
-  src: props => props.theme.file.phone_3
-})``;
+const Img = styled.img.attrs(props => ({
+  src: props.theme.file.phone_1
+}))``;
+const Img2 = styled.img.attrs(props => ({
+  src: props.theme.file.phone_2
+}))``;
+const Img3 = styled.img.attrs(props => ({
+  src: props.theme.file.phone_3
+}))``;
 const BgBox = styled.div`
   width: 538px;
   margin-top: 36px;
@@ -137,14 +139,20 @@ export default () => {
               지금 시작해보세요.
             </Infor>
             <ButtonBox>
-              {/* <AndroidBtn href={"http://allaglobal.com/download/alla.apk"} /> */}
               <AndroidBtn
                 href={
                   "https://play.google.com/store/apps/details?id=io.allawallet.allaglobal"
                 }
                 target="_blanket"
               />
-              <IOSBtn href="#" onClick={() => alert("준비중입니다.")} />
+              <IOSBtn
+                href="https://itunes.apple.com/app/id1500534759"
+                target="_blanket"
+              />
+              <APKBtn
+                href="https://www.allaglobal.com/download/AllAWallet.apk"
+                target="_blanket"
+              />
             </ButtonBox>
           </Content>
         </ContentBox>

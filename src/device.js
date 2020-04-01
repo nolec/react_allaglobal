@@ -22,11 +22,7 @@ const maxSize = {
   PC: 1200,
   PC1280: 1280
 };
-const minSize = {
-  minPC768: 768,
-  minPC992: 992,
-  minPC: 1200
-};
+const minSize = { minPC640: 640, minPC768: 768, minPC992: 992, minPC: 1200 };
 export const device = Object.keys(maxSize).reduce((acc, key) => {
   acc[key] = style => `
       @media (max-width: ${maxSize[key]}px) {
